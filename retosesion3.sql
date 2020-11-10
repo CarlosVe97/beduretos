@@ -59,12 +59,12 @@ JOIN articulo a
 /* Usando la base de datos tienda, define las siguientes vistas que permitan obtener la siguiente información.
 	Obtener el puesto de un empleado. */
 SHOW TABLES;
-
-SELECT CONCAT(e.nombre,' ',e.apellido_paterno,' ',e.apellido_materno) AS nombre_de_empleado, p.nombre AS puesto
+CREATE VIEW puesto_empleados AS 
+(SELECT CONCAT(e.nombre,' ',e.apellido_paterno,' ',e.apellido_materno) AS nombre_de_empleado, p.nombre AS puesto
 FROM empleado AS e
 JOIN puesto AS p
 USING (id_puesto)
-ORDER BY nombre_de_empleado;
+ORDER BY nombre_de_empleado);
 /*  Saber qué artículos ha vendido cada empleado. */
 CREATE VIEW articulos_vendidos AS 
 (SELECT clave, e.nombre , e.apellido_paterno, e.apellido_materno, a.nombre AS nombre_articulo
