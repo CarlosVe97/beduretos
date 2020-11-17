@@ -80,7 +80,7 @@ result = client['sample_airbnb']['listingsAndReviews'].find(
 )
 
 #3
-Usando la colección sample_airbnb.listingsAndReviews, mediante el uso de agregaciones, encontrar el número de publicaciones que tienen conexión a Internet, sea desde Wifi o desde cable (Ethernet).
+#Usando la colección sample_airbnb.listingsAndReviews, mediante el uso de agregaciones, encontrar el número de publicaciones que tienen conexión a Internet, sea desde Wifi o desde cable (Ethernet).
 
 
 client = MongoClient('mongodb+srv://usuarioBedu:testBEDU@clusterbedutest.k1w71.mongodb.net/test?authSource=admin&replicaSet=atlas-d8xikc-shard-0&connectTimeoutMS=600000&socketTimeoutMS=6000000&readPreference=primary&appname=MongoDB%20Compass&ssl=true')
